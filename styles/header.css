@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  display: flex;
+  padding: 42px 40px 0 40px;
+  justify-content: space-between;
+}
+
+.header__range {
+  display: flex;
+  width: 495px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.header__vector {
+  width: 48px;
+  height: 10px;
+}

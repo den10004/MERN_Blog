@@ -5,11 +5,23 @@
 body {
   margin: 0 auto;
   padding: 0;
-  max-width: 1920px;
+  width: 100%;
   background: white;
+  box-sizing: border-box;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+.video-bg video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.wrapper {
+  max-width: 1680px;
+  margin: 0 auto;
 }
