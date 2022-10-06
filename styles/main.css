@@ -1,29 +1,79 @@
 .main {
   margin-top: 117px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 0.89fr 1fr 1fr;
   grid-gap: auto;
-  position: relative;
 }
 
 @media screen and (max-width: 1440px) {
   .main {
     margin-top: 60px;
+    grid-template-columns: 0.5fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .main {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
-.main > div {
-  border: 1px solid red;
+/*********************/
+.main__social {
+  margin: 210px 0 250px 0;
 }
 
-.main__houses {
+@media screen and (max-width: 1024px) {
+  .main__social {
+    margin: 210px 0 100px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main__social {
+    display: none;
+  }
+}
+
+.wh {
+  width: 21px;
+  height: 21px;
+  background-image: url(../images/social.svg);
+  margin-bottom: 30px;
+}
+
+.vk {
+  width: 21px;
+  height: 10px;
+  background-image: url(../images/social.svg);
+}
+
+.main__social-facebook {
+  background-position: 0px 0px;
+}
+
+.main__social-instagram {
+  background-position: 0 110px;
+}
+
+.main__social-twitter {
+  background-position: 0px 220px;
+}
+
+.main__social-vk {
+  background-position: 0 330px;
+}
+
+/**************************************/
+
+.main__houses-list {
+  position: relative;
+}
+
+.main__houses > ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -32,15 +82,23 @@
   font-size: 16px;
   line-height: 19px;
   width: 364px;
+  border: 1px solid red;
 }
 
 @media screen and (max-width: 1440px) {
-  .main__houses {
+  .main__houses > ul {
     width: auto;
+    font-size: 14px;
   }
 }
 
-.main__houses > li {
+@media screen and (max-width: 767px) {
+  .main__houses > ul {
+    display: none;
+  }
+}
+
+.main__houses > ul > li {
   opacity: 0.6;
   text-decoration: underline;
   height: 30px;
@@ -49,16 +107,35 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .main__houses > li {
+  .main__houses > ul > li {
     width: auto;
   }
 }
 
-.main__houses > li:hover {
+.main__houses > ul > li:hover {
   opacity: 1;
 }
 
-.main__description {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 160px;
+  z-index: 1;
+  width: 373px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.dropdown-content > p {
+  margin: 17px 0 9px 0;
+}
+
+.dropdown-content > span {
+  opacity: 0.5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .main__description > h3 {
@@ -75,10 +152,24 @@
 }
 
 .main__description-buttons {
+  display: flex;
   margin-top: 50px;
+  align-items: center;
 }
 
-.main__description-buttons > button {
+@media screen and (max-width: 1024px) {
+  .main__description-buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__description-buttons {
+    margin-top: 30px;
+  }
+}
+
+.chooseApt {
   width: 210px;
   height: 56px;
   border: 1px solid #ffffff;
@@ -86,12 +177,62 @@
   background-color: transparent;
   margin-right: 30px;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 19px;
+  position: relative;
 }
 
-.main__description-buttons > button::after {
+@media screen and (max-width: 1280px) {
+  .chooseApt {
+    font-size: 12px;
+    width: 154px;
+    height: 40px;
+  }
 }
 
-.main__description-buttons > button::hover:after {
+@media screen and (max-width: 1024px) {
+  .chooseApt {
+    margin-right: 0;
+  }
+}
+
+.chooseApt:hover > p {
+  position: relative;
+  color: black;
+  z-index: 5;
+}
+
+.chooseApt::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 56px;
+  transition: all 0.25s ease;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 1280px) {
+  .chooseApt::before,
+  .icon::after {
+    width: 154px;
+    height: 40px;
+  }
+}
+
+.chooseApt-fill {
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.chooseApt-fill::before {
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.chooseApt-fill:hover::before {
+  transition-duration: 1s;
+  box-shadow: inset 0 0 0 150px #ffffff;
 }
 
 .main__description-buttons > a {
@@ -99,4 +240,16 @@
   line-height: 16px;
   color: #ffffff;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .main__description-buttons > a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main__description-buttons > a {
+    margin-top: 30px;
+  }
 }
