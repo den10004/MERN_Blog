@@ -1,0 +1,143 @@
+.apartments {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.apartments__room {
+  display: grid;
+  grid-template-columns: 90px 56px 56px 56px 56px;
+  grid-gap: 0;
+  width: 314px;
+  height: 56px;
+  cursor: pointer;
+  border: none;
+}
+
+.apartments__room-studio {
+  font-size: 16px;
+  line-height: 16px;
+  color: #171723;
+  background: #ffffff;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  text-align: center;
+  border: none;
+}
+
+.apartments__room-rooms {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.apartments__room-rooms:last-child {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.apartments__area {
+  width: 270px;
+  height: 56px;
+  display: flex;
+}
+
+.apartments__area > input {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 15px;
+}
+
+.apartments__area > input:first-child {
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.apartments__area > input:last-child {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+/**********************************/
+
+.apartments__residential-complex-block {
+  width: 270px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  padding: 0 15px 0 15px;
+}
+
+.apartments__residential-complex {
+  display: flex;
+  justify-content: space-between;
+  width: 442px;
+}
+
+.apartments__residential-complex_more {
+  display: flex;
+  width: 127px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  align-items: center;
+}
+
+.apartments__residential-complex_more > button {
+  width: 100%;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.16);
+  border: none;
+  padding: 12px 19px 12px 19px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.text {
+  margin-left: 14px;
+}
+
+.apartments__residential-complex_button {
+  width: 224px;
+  height: 56px;
+  background: #d90002;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}

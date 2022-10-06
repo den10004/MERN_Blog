@@ -1,5 +1,6 @@
 @import "./header.css";
 @import "./main.css";
+@import "./apartments.css";
 @import "./normalize.css";
 @import "../vendor/fonts.css";
 
@@ -101,6 +102,13 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #ffffff;
+}
+
+.core-Sans-C-400w {
+  font-family: "Core Sans C";
+  font-style: normal;
+  font-weight: 400;
+  color: black;
 }
 
 .hr {
