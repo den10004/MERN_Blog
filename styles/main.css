@@ -1,0 +1,102 @@
+.main {
+  margin-top: 117px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.89fr 1fr 1fr;
+  grid-gap: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+  .main {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 30px;
+  }
+}
+
+.main > div {
+  border: 1px solid red;
+}
+
+.main__houses {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  height: 160px;
+  font-size: 16px;
+  line-height: 19px;
+  width: 364px;
+}
+
+@media screen and (max-width: 1440px) {
+  .main__houses {
+    width: auto;
+  }
+}
+
+.main__houses > li {
+  opacity: 0.6;
+  text-decoration: underline;
+  height: 30px;
+  cursor: pointer;
+  width: 160px;
+}
+
+@media screen and (max-width: 1440px) {
+  .main__houses > li {
+    width: auto;
+  }
+}
+
+.main__houses > li:hover {
+  opacity: 1;
+}
+
+.main__description {
+}
+
+.main__description > h3 {
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (max-width: 1440px) {
+  .main__description > h3 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.main__description-buttons {
+  margin-top: 50px;
+}
+
+.main__description-buttons > button {
+  width: 210px;
+  height: 56px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  background-color: transparent;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.main__description-buttons > button::after {
+}
+
+.main__description-buttons > button::hover:after {
+}
+
+.main__description-buttons > a {
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
