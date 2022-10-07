@@ -1,6 +1,8 @@
-# Тестовое 
+# Тестовое задание
+# Вёрстка HTML/CSS
+# Слайдер Swiper  
+https://swiperjs.com/
 
-https://github.com/den10004/Mark.git
 
 # Ссылка на проект
 
