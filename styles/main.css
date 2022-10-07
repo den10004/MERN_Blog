@@ -2,14 +2,13 @@
   margin-top: 117px;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 0.89fr 1fr 1fr;
+  grid-template-columns: 0.66fr 1fr 0.93fr;
   grid-gap: auto;
 }
 
 @media screen and (max-width: 1440px) {
   .main {
     margin-top: 60px;
-    grid-template-columns: 0.5fr 1fr 1fr;
   }
 }
 
@@ -70,12 +69,33 @@
 }
 
 /**************************************/
+.q {
+  display: flex;
+  justify-content: space-between;
+}
+.sliderButtons {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+  height: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .sliderButtons {
+    display: none;
+  }
+}
+
+.sliderButtons > button {
+  border: none;
+  background: transparent;
+}
 
 .main__houses-list {
   position: relative;
 }
 
-.main__houses > ul {
+.main__houses-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -87,19 +107,19 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .main__houses > ul {
-    width: auto;
+  .main__houses-list {
+    width: 300px;
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .main__houses > ul {
+  .main__houses-list {
     display: none;
   }
 }
 
-.main__houses > ul > li {
+.main__houses-list > li {
   opacity: 0.6;
   text-decoration: underline;
   height: 30px;
@@ -108,12 +128,12 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .main__houses > ul > li {
+  .main__houses-list > li {
     width: auto;
   }
 }
 
-.main__houses > ul > li:hover {
+.main__houses-list > li:hover {
   opacity: 1;
 }
 
