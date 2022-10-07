@@ -8,20 +8,50 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  background: burlywood;
   box-sizing: border-box;
+  background: black;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.video-bg video {
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  position: absolute;
+  height: 100vh;
+  overflow: hidden;
 }
 
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.wrapToVideo {
+  z-index: 1;
+  color: #fefefe;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .domRf-big {
   position: absolute;
   top: 215px;
@@ -121,4 +151,24 @@ body {
 .hr {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+button {
+  cursor: pointer;
+}
+
+.position {
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding-bottom: 42px;
+}
+
+@media screen and (max-width: 425px) {
+  .position {
+    padding-bottom: 20px;
+  }
 }

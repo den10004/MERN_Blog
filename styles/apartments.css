@@ -14,7 +14,7 @@
   }
   .apartmentsMin {
     display: flex;
-    margin-top: 15px;
+    margin: 15px 0 0 0;
   }
 }
 
@@ -30,6 +30,13 @@
   line-height: 14px;
   font-weight: 500;
   padding: 0 20px 0 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 425px) {
+  .apartmentsMin > input {
+    width: 310px;
+  }
 }
 
 .apartments__headline {
