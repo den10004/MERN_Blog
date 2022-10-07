@@ -111,13 +111,14 @@ body {
   color: black;
 }
 
+.core-Sans-C-400Medium {
+  font-family: "Core Sans C";
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+}
+
 .hr {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-@media screen and (max-width: 767px) {
-  .hr {
-    display: none;
-  }
 }

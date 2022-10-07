@@ -4,3 +4,10 @@
   font-weight: 400;
   src: url("./fonts/CoreSansC-45Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Core Sans C";
+  font-style: medium;
+  font-weight: 500;
+  src: url("./fonts/CoreSansC-55Medium.ttf") format("truetype");
+}
