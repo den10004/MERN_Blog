@@ -67,7 +67,7 @@
 }
 
 .header__range > li {
-  transition: 0.5s;
+  width: auto;
 }
 
 .header__range > li:hover {
@@ -85,4 +85,40 @@
   .header__vector {
     width: 38px;
   }
+}
+
+.button {
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  position: relative;
+  visibility: hidden;
+  width: 100%;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(title);
+  display: block;
+  visibility: visible;
+  flex-shrink: 0;
+}
+.button::before {
+  transform: translateY(0) rotateX(0);
+}
+.button::after {
+  opacity: 0.5;
+  transform: translateY(50%) rotateX(-90deg);
+}
+.button:hover::before {
+  transform: translateY(-50%) rotateX(90deg);
+  transition: all 0.2s ease-in-out;
+}
+.button:hover::after {
+  transform: translateY(0) rotateX(0);
+  transition: all 0.2s ease-in-out;
 }
