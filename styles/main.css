@@ -2,8 +2,14 @@
   margin-top: 117px;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 0.66fr 1fr 0.93fr;
+  grid-template-columns: 0.77fr 1fr 1fr;
   grid-gap: auto;
+}
+
+@media screen and (max-width: 1600px) {
+  .main {
+    grid-template-columns: 0.5fr 0.8fr 1fr;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -17,7 +23,6 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    height: 418px;
   }
 }
 
@@ -181,6 +186,7 @@
 @media screen and (max-width: 1024px) {
   .main__description-buttons {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
