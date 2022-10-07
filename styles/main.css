@@ -69,7 +69,7 @@
 }
 
 /**************************************/
-.q {
+.main__houses-wrap {
   display: flex;
   justify-content: space-between;
 }
