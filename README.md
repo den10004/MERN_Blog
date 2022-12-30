@@ -1,4 +1,3 @@
-# Тестовое задание
 # Вёрстка HTML/CSS
 # Слайдер Swiper  
 https://swiperjs.com/
